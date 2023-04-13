@@ -28,7 +28,8 @@ public abstract class Player {
        return points;
    }
 
-
+   //This abstract method will initiate the makemove method
+    public abstract String makeMove();
 
 
 }
