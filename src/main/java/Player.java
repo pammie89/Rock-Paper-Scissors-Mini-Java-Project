@@ -1,3 +1,6 @@
+//To help with solidifying my understanding of abstracts - this page is an abstract class because it is only
+//providing the idea of functionality.  Whereas with the pages (HumanPlayer & ComputerPlayer) that are extending from it
+//is where the methods are actually being instantiated.
 public abstract class Player {
 
     //These are the instance variables

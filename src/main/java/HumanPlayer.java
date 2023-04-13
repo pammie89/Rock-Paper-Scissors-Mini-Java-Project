@@ -7,7 +7,7 @@ public class HumanPlayer extends Player {
     //This is the constructor and takes scanner object as its argument.
     public HumanPlayer(Scanner scanner) {
         super();
-        //this scanner assigns the scanner to the scanner instance variable.
+        //this assigns the scanner to the scanner instance variable.
         this.scanner = scanner;
     }
 
