@@ -6,10 +6,12 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
     //These are the inital options the player will have to choose from.
         while (true) {
-            System.out.println("How would you like to play?");
-            System.out.println("Option #1: 2 Player Game");
-            System.out.println("Option #2: Play against Computer");
-            System.out.println("Option #3: Exit Game");
+            System.out.println("SELECT YOUR GAME PLAY MODE?");
+            System.out.println("//////////////////////////");
+            System.out.println("(1) - Two Player Game");
+            System.out.println("(2) - Play against Computer");
+            System.out.println("(3) - Exit Game");
+            System.out.println("ENTER NUMBER BELOW");
             // This line await for the users input.
            int option = scanner.nextInt();
             scanner.nextLine();
@@ -22,15 +24,17 @@ public class Main {
             //Checks if the player selects option 2, which is to play against the computer
             } else if (option == 2) {
                 Player player1 = new HumanPlayer(scanner);
-                Player player2 = new HumanPlayer(scanner);
+                Player player2 = new ComputerPlayer();
                 Game game = new Game(player1, player2);
                 playGame(game, scanner);
             //checks if the player wants to exit the game.
             } else if (option == 3) {
+                System.out.println("Thank you for playing!");
                 break;
+
             //This presents itself if they enter their option incorrectly.
             } else {
-                System.out.println("Invalid option selected.  Please choose again.");
+                System.out.println("Invalid option selected.  Please choose again. Use only numbers.");
             }
         }
 

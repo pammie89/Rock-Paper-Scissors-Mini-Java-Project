@@ -1,10 +1,10 @@
 public class Game {
 
-    //This is essentially handling the games logic.
+    //This is essentially handling the games' logic.
 
     //two provide instances for player1 & player2
-    private Player player1;
-    private Player player2;
+    private final Player player1;
+    private final Player player2;
 
     //This is the constructor which takes two player arguments.
     public Game (Player player1, Player player2) {

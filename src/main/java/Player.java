@@ -22,16 +22,16 @@ public abstract class Player {
    public void setMove(String move) {
        this.move = move;
    }
-    //This method returns the current value of move.
-   public String getMove() {
-       return move;
-   }
+//    //This method returns the current value of move.
+//   public String getMove() {
+//       return move;
+//   }
     //This method returns the value of points.
    public int getPoints() {
        return points;
    }
 
-   //This abstract method will initiate the makemove method
+   //This abstract method will initiate the make move method
     public abstract String makeMove();
 
 

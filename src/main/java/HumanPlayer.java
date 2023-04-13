@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 //This HumanPlayer class extends from Player and represents a player in the game
 public class HumanPlayer extends Player {
-    private Scanner scanner;
+    private final Scanner scanner;
 
     //This is the constructor and takes scanner object as its argument.
     public HumanPlayer(Scanner scanner) {
