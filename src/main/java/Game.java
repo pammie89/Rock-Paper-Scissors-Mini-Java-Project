@@ -5,6 +5,7 @@ public class Game {
     //two provide instances for player1 & player2
     private final Player player1;
     private final Player player2;
+    //An arraylist that keeps the game results
 
     //This is the constructor which takes two player arguments.
     public Game (Player player1, Player player2) {
@@ -13,7 +14,7 @@ public class Game {
     }
 
     //This play method will handle each round of the game.
-    public void play() {
+    public void play(GameHistory gameHistory) {
         //It calls on the makeMove method here for player 1 & 2.
         String p1Move = player1.makeMove();
         String p2Move = player2.makeMove();
@@ -26,12 +27,15 @@ public class Game {
         //This if else statement displays the suitable outcome of the game (win or tie).
         if(result == 0) {
             System.out.println("It is a tie game!");
+            gameHistory.addGameResult(new GameResult("Tie"));
         } else if (result == 1) {
             System.out.println("Player 1 is the winner!");
             player1.incrementPoints();
+            gameHistory.addGameResult(new GameResult("Player 1"));
         } else {
             System.out.println("Player 2 is the winner!");
             player2.incrementPoints();
+            gameHistory.addGameResult(new GameResult("Player 2"));
         }
     }
 

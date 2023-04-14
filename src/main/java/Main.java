@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         //Scanner object reads the user input
         Scanner scanner = new Scanner(System.in);
-    //These are the inital options the player will have to choose from.
+    //These are the initial options the player will have to choose from.
         while (true) {
             System.out.println("SELECT YOUR GAME PLAY MODE?");
             System.out.println("//////////////////////////");
@@ -15,18 +15,19 @@ public class Main {
             // This line await for the users input.
            int option = scanner.nextInt();
             scanner.nextLine();
+            GameHistory gameHistory = new GameHistory();
             //Checks if player selects option 1, which is to play against another player
             if (option == 1) {
                 Player player1 = new HumanPlayer(scanner);
                 Player player2 = new HumanPlayer(scanner);
                 Game game = new Game(player1, player2);
-                playGame(game, scanner);
+                playGame(game, scanner, gameHistory);
             //Checks if the player selects option 2, which is to play against the computer
             } else if (option == 2) {
                 Player player1 = new HumanPlayer(scanner);
                 Player player2 = new ComputerPlayer();
                 Game game = new Game(player1, player2);
-                playGame(game, scanner);
+                playGame(game, scanner, gameHistory);
             //checks if the player wants to exit the game.
             } else if (option == 3) {
                 System.out.println("Thank you for playing!");
@@ -42,10 +43,10 @@ public class Main {
     }
 
     //PlayGame method which takes two arguments - game & scanner
-    private static void playGame(Game game, Scanner scanner) {
-        //starts a loop that asks if the player if they would like to play again.
+    private static void playGame(Game game, Scanner scanner, GameHistory gameHistory) {
+        //starts a loop that asks if the player is they would like to play again.
         while (true) {
-            game.play();
+            game.play(gameHistory);
             System.out.println("Would you like to play again? (y/n): ");
             String input = scanner.nextLine().toLowerCase();
             //if the player enters an invalid entry this while loop will run.
@@ -58,6 +59,7 @@ public class Main {
                 break;
             }
         }
+        gameHistory.printHistory();
     }
 
     //This is a helper method that take a string and await y or n answers to continuing playing or quiting the game.
