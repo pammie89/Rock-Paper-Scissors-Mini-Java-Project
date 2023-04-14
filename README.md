@@ -54,11 +54,11 @@ The game allows the player to choose between three options: playing against anot
 
 ### --- MVP Bronze --- (- ✓ = Completed Task / - ✗ = Incompleted Task )
 
-1. The game must provide options to play another player or vs computer. - ✗ <br>
-2. If the user enters 2 players, they should be able to play the game with another person at that same computer. - ✗   <br>
-3. If the player selects to play against computer, the computer will automatically choose and option - ✗  <br>
-4. When the game is over a winner should be declared. - ✗  <br>
-5. The player should be given the option to exit the game. - ✗ <br>
+1. The game must provide options to play another player or vs computer. - ✓ <br>
+2. If the user enters 2 players, they should be able to play the game with another person at that same computer. - ✓   <br>
+3. If the player selects to play against computer, the computer will automatically choose and option - ✓  <br>
+4. When the game is over a winner should be declared. - ✓  <br>
+5. The player should be given the option to exit the game. - ✓ <br>
 
 
 
@@ -66,7 +66,7 @@ The game allows the player to choose between three options: playing against anot
 
 1. Write automated JUnit tests for app. - ✗ <br>
 2. Use an Agile framework.  - ✗ <br>
-3. Keep a running history of the games played. - ✗  <br>
+3. Keep a running history of the games played. - ✓  <br>
 4. Use a Java packages to modularize code. - ✗  <br>
 5. Use multithreading techniques. - ✗  <br>
 6. Incorporate video, text, sounds etc into the game. - ✗  <br>
